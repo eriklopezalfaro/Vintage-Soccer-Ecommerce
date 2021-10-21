@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Soccer | Vintage Jerseys</title>
+</head>
+<body>
+    <header>
+        <nav>
+            {% if user.is_authenticated %}
+            <h3>Logged in as {{ user.username }}</h3>
+            <form action="{% url 'logout_user' %}" method="POST">
+                {% csrf_token %}
+                <button type="submit">Logout</button>   
+            </form>
+            {% else %}
+            <a href="{% url 'signup' %}">Sign up</a>
+            <a href="{% url 'login_user' %}">Log in</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+</body>
+</html>
