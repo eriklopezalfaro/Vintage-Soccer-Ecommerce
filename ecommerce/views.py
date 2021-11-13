@@ -3,7 +3,6 @@ from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 def home(request):
-    
-    return render(request, 'ecommerce/home.html')
+    return render(request, 'ecommerce/index.html')
 
 

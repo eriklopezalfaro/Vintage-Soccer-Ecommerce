@@ -43,4 +43,5 @@ def logout_user(request):
     if request.method == 'POST':
         logout(request)
         print('We here')
-        return redirect('signup')
+        # return redirect('signup')
+        return redirect('home')
