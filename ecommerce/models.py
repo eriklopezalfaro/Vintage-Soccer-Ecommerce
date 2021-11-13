@@ -11,3 +11,4 @@ class Item(models.Model):
 
 class ShoppingCart(models.Model):
     cart_item = models.ForeignKey(Item, on_delete=models.CASCADE, null=True)
+    
