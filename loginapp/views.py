@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from ecommerce import views
 from django.db import IntegrityError
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def register(request):
@@ -38,7 +39,8 @@ def login_user(request):
         else:
             login(request, user)
             return redirect('home')
- 
+            
+@login_required
 def logout_user(request):
     if request.method == 'POST':
         logout(request)
