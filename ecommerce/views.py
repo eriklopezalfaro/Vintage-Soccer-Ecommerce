@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
+from .models import Item
 
 # Create your views here.
 def home(request):
-    return render(request, 'ecommerce/index.html')
+    items = Item.objects.all()
+    return render(request, 'ecommerce/index.html', {'items' : items})
 
 

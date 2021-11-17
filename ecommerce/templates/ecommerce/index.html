@@ -139,7 +139,25 @@
         <h1 class="heading"> our <span>products</span></h1>
         <div class="swiper product-slider">
             <div class="swiper-wrapper">
+
+                {% block content %}
+                {% for item in items %}
                 <div class="swiper-slide box">
+                    <img src="{{ item.image.url }}" alt="">
+                    <h3>{{ item.title }}</h3>
+                    <div class="price"> ${{ item.price }}</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+                {% endblock %}
+
+                <!-- <div class="swiper-slide box">
                     <img src="{% static 'ecommerce/image/product-1.jpeg' %}" alt="">
                     <h3>mexico mundial</h3>
                     <div class="price"> $49.99/- - 55.99/- </div>
@@ -193,7 +211,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- products section ends -->
 
     <!-- categories section begins -->
