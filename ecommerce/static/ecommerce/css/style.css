@@ -6,7 +6,7 @@
     --light-color:rgb(160, 160, 160);
     --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
     --border:.2rem solid rgba(0,0,0,.1);
-    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline:.2rem solid rgba(0,0,0,.1);
     --outline-hover:.2rem solid var(--black);
 }
 
@@ -47,7 +47,7 @@ section{
     color: #fff;
     display: inline-block;
     padding: .5rem 3rem;
-    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+    /* clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%); */
 }
 .btn{
     margin-top: 1rem;
@@ -58,7 +58,7 @@ section{
     border: .2rem solid var(--black);
     color: var(--black);
     cursor: pointer;
-    background: none;
+    background:rgba(214, 207, 207, 0.473);
 }
 .btn:hover{
     background: var(--red);

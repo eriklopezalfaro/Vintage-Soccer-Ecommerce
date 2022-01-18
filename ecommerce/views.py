@@ -7,4 +7,5 @@ def home(request):
     items = Item.objects.all()
     return render(request, 'ecommerce/index.html', {'items' : items})
 
-
+def add_to_cart(request, item_id):
+    pass

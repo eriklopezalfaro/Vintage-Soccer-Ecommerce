@@ -5,7 +5,6 @@ document.querySelector('#search-btn').onclick = () => {
     shoppingCart.classList.remove('active');
     loginForm.classList.remove('active');
     navbar.classList.remove('active');
-
 }
 
 let shoppingCart = document.querySelector('.shopping-cart');
